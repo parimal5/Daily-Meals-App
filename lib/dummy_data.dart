@@ -65,6 +65,7 @@ const DUMMY_MEALS = const [
     ],
     title: 'Chole Bhature',
     complexity: Complexity.Simple,
+    affordability: Affordability.Affordable,
     imageUrl:
         'https://image.shutterstock.com/image-photo/chole-bhature-chick-pea-curry-600w-1072270610.jpg',
     duration: 20,

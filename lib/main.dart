@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/meal_detail_screen.dart';
 import 'screens/catagories_screen.dart';
 import 'screens/category_meal_screen.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliMeals',
+      title: 'Hunger Buster',
       theme: ThemeData(
           primarySwatch: Colors.pink,
           accentColor: Colors.amber,
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
       home: CatagoriesScreen(),
       routes: {
         CatagoryMealsScreen.routeName: (ctx) => CatagoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+      },
+      onUnknownRoute: (setting) {
+        return MaterialPageRoute(builder: (ctx) => CatagoriesScreen());
       },
     );
   }
